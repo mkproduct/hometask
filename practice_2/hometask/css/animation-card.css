@@ -1,0 +1,174 @@
+/* animatiomn common content */
+.animation-content {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+/* content boxes */
+.animation-boxes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 30px;
+    margin: 0 15px;
+    z-index: 2;
+    background: #fff;
+    backface-visibility: hidden;
+}
+/* for animation and*/
+.animation-boxes::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255, .8);
+    z-index: 2;
+}
+.animation-box-1::after,
+.animation-box-3::after {
+    content: '';
+    position: absolute;
+    left: -100%;
+    bottom: 30px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+}
+.animation-box-3::after {left: 100%;}
+
+.animation-img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 15px;
+}
+
+.animation-circle {
+    width: 15px;
+    height: 15px;
+}
+
+/* img description */
+.img-subtitle {
+    position: relative;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+    z-index: 3;
+    opacity: .3;
+}
+
+/* animation line (used pseudo element basic content) */
+.animation-content::before,
+.animation-content::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+    width: 100%;
+    height: 2px;
+    background: #C4C9C9;
+    z-index: 1;
+    transition: .5s;
+}
+
+
+
+/* animation action */
+
+/* line */
+.animation-content::after {
+    left: -100%;
+    background: #000;
+    animation: line 10s linear infinite;
+}
+/* boxes */
+.animation-box-1::before {
+    animation: action-1 10s linear infinite;
+}
+
+.animation-box-2::before {
+    animation: action-2 10s linear infinite;
+}
+
+.animation-box-3::before {
+    animation: action-3 10s linear infinite;
+}
+
+/* subtitles */
+.img-subtitle-1 {
+    animation: sub-1 10s linear infinite;
+}
+.img-subtitle-2 {
+    animation: sub-2 10s linear infinite;
+}
+.img-subtitle-3 {
+    animation: sub-3 10s linear infinite;
+}
+
+
+/* animation keyframes */
+
+@keyframes line {
+    100% {
+        left: 0;
+    }
+}
+
+/* box 1 */
+@keyframes action-1 {
+    0% {
+        background: rgba(255, 255, 255, 0);
+    }
+    80% {
+        background: rgba(255, 255, 255, 0);
+    }
+}
+/* box 2 */
+@keyframes action-2 {
+    80% {
+        background: rgba(255, 255, 255, .0);
+    }
+}
+/* box 3 */
+@keyframes action-3 {
+    80% {
+        background: rgba(255, 255, 255, .8);
+    }
+    100% {
+        background: rgba(255, 255, 255, 0);
+    }
+}
+
+
+/* subtitle 1 */
+@keyframes sub-1 {
+    0% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+}
+
+/* subtitle 2 */
+@keyframes sub-2 {
+    80% {
+        opacity: 1;
+    }
+}
+
+/* subtitle 3 */
+@keyframes sub-3 {
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

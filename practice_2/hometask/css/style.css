@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background: rgba(196, 201, 201, .2);
+}
+
+/* parent sidebars */
+.login-content {
+    display: flex;
+    height: 500px;
+}
+
+/* sidebars */
+.sidebar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 500px;
+    border-radius: 0 5px 5px 0;
+}

@@ -1,0 +1,58 @@
+/* main section 1 */
+.user-info {
+    background: #fff;
+}
+
+
+/* top logo */
+.title {
+    display: flex;
+    align-items: center;
+    /* height: 50px; */
+    background: #018AAE;
+}
+
+.title_control {
+    padding: 0 20px;
+}
+
+.title__link {
+    /* outline: 1px solid; */
+    display: inline-block;
+    padding: 10px;
+}
+
+.title__img {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+}
+
+.title__desc {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #f1f1f1;
+}
+
+.title__desc-domain {
+    color: #f1f1f1;
+}
+
+
+
+/* top control-panel */
+.control-panel {
+    padding: 20px;
+}
+
+.control-panel__logo {
+    font-size: 36px;
+    font-weight: 100;
+    text-transform: capitalize;
+    color: #424347;
+    margin-bottom: 15px;
+}
+
+.control-panel__user-welcome {
+    color: #6C757D
+}
